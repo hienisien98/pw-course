@@ -1,0 +1,1 @@
+Tuần này mình xin phep skip bài này vì quá nhiều bài tập và bài test
