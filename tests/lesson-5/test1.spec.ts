@@ -1,4 +1,5 @@
 import { test } from "@playwright/test";
+import path from "path";
 import { parseEnv } from "util";
 
 test("Test 01", async ({ page }) => {
@@ -17,10 +18,12 @@ test("Test 01", async ({ page }) => {
         await page.locator("//input[@id='traveling']").check();
         await page.locator("//input[@id='cooking']").check();
         await page.locator("//select[@id='country']").selectOption("uk");
+        // await page.locator("//input[@id='profile']").setInputFiles(path.join(__dirname, 'data/mau.txt'));
+        await page.locator("//input[@id='profile']").setInputFiles("tests/lesson-5/data/mau.txt");
     })
 
-    await test.step("Nhấn nút Register", async () => {
-        await page.locator("//button[text()='Register']").click();
-    })
+    // await test.step("Nhấn nút Register", async () => {
+    //     await page.locator("//button[text()='Register']").click();
+    // })
 
 })
