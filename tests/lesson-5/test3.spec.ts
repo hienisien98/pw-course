@@ -1,6 +1,6 @@
 import { test } from "@playwright/test";
 
-test("Test 03", async ({ page }) => {
+test("Test 03 unit record", async ({ page }) => {
     await test.step("Go to page", async () => {
         await page.goto('https://material.playwrightvn.com/');
     })
@@ -23,7 +23,7 @@ test("Test 03", async ({ page }) => {
         const count = await value.count();
 
         page.on('dialog', async dialog => dialog.accept());
-                
+
         for(let i = count; i > 0; i--){
             if( i % 2 !== 0){
                 let buttonDelete = `//button[@id='todo-${(i)}-delete']`;
